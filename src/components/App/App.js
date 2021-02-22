@@ -1,10 +1,11 @@
 import { useState } from 'react'
+import Header from '../Header/Header'
 import PlayerForm from '../PlayerForm/PlayerForm'
 import GameForm from '../GameForm/GameForm'
 import Player from '../Player/Player'
 import Button from '../Button/Button'
 import Navigation from '../Navigation/Navigation'
-import Header from '../Header/Header'
+import HistoryEntry from '../HistoryEntry/HistoryEntry'
 import './App.css'
 
 function App() {
@@ -27,6 +28,10 @@ function App() {
       ))}
       <Button text={'Reset scores'} onClick={resetScores}></Button>
       <Button text={'Reset all'} onClick={resetAll}></Button>
+      <Button text={'End Game'} onClick={storeBoard} />
+
+      <HistoryEntry />
+
       <Navigation onNavigate={() => console.log('click')} />
     </div>
   )
@@ -53,6 +58,9 @@ function App() {
   }
   function resetAll() {
     setPlayers([])
+  }
+  function storeBoard() {
+    console.log('store Board in localStorage')
   }
 }
 
