@@ -3,6 +3,7 @@ import PlayerForm from '../PlayerForm/PlayerForm'
 import GameForm from '../GameForm/GameForm'
 import Player from '../Player/Player'
 import Button from '../Button/Button'
+import Navigation from '../Navigation/Navigation'
 import './App.css'
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
   return (
     <div className="App">
       <GameForm />
-      {/* <PlayerForm onAddPlayer={addPlayer} />
+      <PlayerForm onAddPlayer={addPlayer} />
+      <br />
       {players.map(({ name, score, id }, index) => (
         <Player
           key={id}
@@ -22,7 +24,8 @@ function App() {
         />
       ))}
       <Button text={'Reset scores'} onClick={resetScores}></Button>
-      <Button text={'Reset all'} onClick={resetAll}></Button> */}
+      <Button text={'Reset all'} onClick={resetAll}></Button>
+      <Navigation />
     </div>
   )
 
