@@ -4,6 +4,7 @@ import GameForm from '../GameForm/GameForm'
 import Player from '../Player/Player'
 import Button from '../Button/Button'
 import Navigation from '../Navigation/Navigation'
+import Header from '../Header/Header'
 import './App.css'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header title={'GameNameApp'} />
       <GameForm />
       <PlayerForm onAddPlayer={addPlayer} />
       <br />
@@ -25,7 +27,7 @@ function App() {
       ))}
       <Button text={'Reset scores'} onClick={resetScores}></Button>
       <Button text={'Reset all'} onClick={resetAll}></Button>
-      <Navigation />
+      <Navigation onNavigate={() => console.log('click')} />
     </div>
   )
 
